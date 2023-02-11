@@ -1,0 +1,48 @@
+thẻ meta
+
+JSON - deep copy
+
+promise lấy thằng thứ 2 nếu thằng 1 thất bại
+
+---------------------------------------
+
+What is Function Dispatch in Redux?
+
+What is TestRenderer package in React?
+
+reactjs là client side rendering hay serverside rendering?
+
+typescript abstract class
+
+hiểu rõ object.entries
+
+in operator
+
+---------------------------------------
+
+ES6 module
+  + Export một biến, export default khác nhau như thế nào
+  + Cách import, import với alias name
+
+JSON là gì, ưu điểm của JSON
+
+Xử lý ngày giờ trong JS
+
+---------------------------------------
+
+semantic version
+
+racing effect trong Redux
+
+prototype JS
+
+khi thay đổi component cha thì component con có thay đổi ko? (cho dù props thay đổi)
+
+viết unit test có cover hết được trường hợp khi code thay đổi ko? ví dụ: khi refactor code thì unit test có đảm bảo
+cover hết các trường hợp không?
+
+so sánh 2 object có bằng nhau ko? (1 cấp và nhiều cấp)
+
+flex-flow, flex-grow
+
+grid
