@@ -36,7 +36,7 @@ racing effect trong Redux
 
 prototype JS
 
-khi thay đổi component cha thì component con có thay đổi ko? (cho dù props thay đổi)
+khi thay đổi component cha thì component con có thay đổi ko? (cho dù props không thay đổi)
 
 viết unit test có cover hết được trường hợp khi code thay đổi ko? ví dụ: khi refactor code thì unit test có đảm bảo
 cover hết các trường hợp không?
