@@ -1,0 +1,30 @@
++ Setup environments:
+* nodejs
+* android studio
+* vysor
+* jdk 11 (Windows x64 Installer)
+* set adb path -> evironment variables -> User variables for PC -> Path -> gán vô: C:\Users\PC\AppData\Local\Android\sdk\platform-tools
+* react-native cli: npm install -g react-native-cli
+
++ Setup project:
+* create project: npx react-native appName
+* run project: yarn android
+* Nếu chạy project có lỗi SDK:
+-> tạo file local.properties trong /android
+-> sdk.dir=C:\\Users\\PC\\AppData\\Local\\Android\\Sdk hoặc tìm thư mục Sdk rồi add vào
+
++ Xử lý lỗi
+* Unable to reosolve module (.jsx|...) => reset cache React Native: react-native start --reset-cache
+
++ Debug:
+c1
+* write debugger in code at where you want to debug => shake the phone => choose debug in the bottom
+hoặc
+c2:
+* yarn add -D react-devtools
+* add to scripts in package.json: "react-devtools": "react-devtools"
+* bên android: shake để vô developer settings => chọn show inspect elements
+* yarn run react-devtools
+* bên android: shake lần nữa để vô developer settings => chọn reload
+* If connecting to the emulator proves troublesome (especially Android 12), try running: adb reverse tcp:8097 tcp:8097 
+(8097 là port debugger-ui của react-devtools)

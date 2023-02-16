@@ -1,0 +1,5 @@
+* Tạo project Angular với npm
+ng config -g cli.packageManager npm
+
+* Tạo project Angular với yarn
+ng config -g cli.packageManager yarn

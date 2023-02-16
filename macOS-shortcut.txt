@@ -1,0 +1,21 @@
++ shortcut
+- copy: Window + C
+- paste: Window + V
+- switch tab: Window + Tab
+- close current window: Window + W
+- minimize current window: Window + M
+
++ Command Line
+- return to previous directory: cd .
+- select all: Window + A
+
++ software
+- Install Homebrew:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+- Install NVM:
+brew install nvm
+source $(brew --prefix nvm)/nvm.sh
+
+- NodeJS
+- NVM
