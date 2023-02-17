@@ -1,0 +1,37 @@
+docker:
+  image:
+    build docker image:
+      - docker image build -t <image-name> <context> => VD: docker image build -t demo .
+    kiểm tra các layers của 1 docker image:
+      - docker inspect image <image-name>
+
+  container:
+    hiển thị các container đang chạy trên hệ thống:
+      - docker compose ps
+      - hoặc docker-compose ps (cách này hiển thị thông tin dễ nhìn hơn)
+
+  volume:
+    hiển thị danh sách các volume:
+      - docker volume ls
+    xem thông tin volume cụ thể:
+      - docker inspect volume <volume-name>
+    truy cập vào bên trong container:
+      - docker container exec -it <id/name> <shell> => VD: docker container exec -it 463ece2c6786 /bin/bash
+
+  compose:
+    chạy và cài đặt docker-compose theo file docker-compose.yaml:
+      - docker-compose up
+      - docker-compose up -d => chạy docker compose dưới dạng dettached mode (chạy ngầm) 
+    stop docker compose đang chạy ở dettached mode:
+      - docker-compose stop
+    khởi động lại các container (sau khi đã stop):
+      - docker-compose start
+    kiểm tra file docker-compose.yaml có hợp lệ hay không:
+      - docker-compose config (lệnh này docker sẽ in ra nội dung file và nếu có lỗi thì docker sẽ báo lỗi ở dòng nào cho ta biết)
+      - docker-compose config -q (kiểm tra ở chế độ quiet mode => lệnh này docker sẽ chạy và check nhưng sẽ không in ra nội dung file và lỗi của nó)
+    xem danh sách các proccess đang chạy trong container:
+      - docker-compose top
+    xem logs của tất cả các container trong application của bạn:
+      - docker-compose logs
+    xóa tất cả các container trong docker compose (phải stop docker compose trước rồi mới xóa được):
+      - docker-compose rm
