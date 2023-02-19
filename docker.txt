@@ -5,10 +5,26 @@ docker:
     kiểm tra các layers của 1 docker image:
       - docker inspect image <image-name>
 
+
   container:
-    hiển thị các container đang chạy trên hệ thống:
-      - docker compose ps
-      - hoặc docker-compose ps (cách này hiển thị thông tin dễ nhìn hơn)
+    hiển thị các container (ở trạng thái đang chạy) trên hệ thống:
+      - docker ps
+    hiển thị các container (ở trạng thái đang chạy và không chạy) trên hệ thống:
+      - docker ps -a
+    chạy container ở port mặc định:
+      - docker run <container-id/container-name>
+    chạy container với custom port và name, kèm theo image (nếu có):
+      - docker run -p<binding-port>:<root-port> --name <binding-name> <image-name(optional)>
+    stop 1 container:
+      - docker stop <container-id/container-name>
+    xóa 1 container:
+      - docker remove <container-id/container-name>
+    xem log của 1 container:
+      - docker logs <container-id/container-name>
+    xem evironmental hoặc những thứ bên trong 1 container:
+      - docker exec -it <container-id/container-name> /bin/bash
+      => ls => pwd => cd / => ls => env
+
 
   volume:
     hiển thị danh sách các volume:
@@ -17,6 +33,7 @@ docker:
       - docker inspect volume <volume-name>
     truy cập vào bên trong container:
       - docker container exec -it <id/name> <shell> => VD: docker container exec -it 463ece2c6786 /bin/bash
+
 
   compose:
     chạy và cài đặt docker-compose theo file docker-compose.yaml:
@@ -35,3 +52,5 @@ docker:
       - docker-compose logs
     xóa tất cả các container trong docker compose (phải stop docker compose trước rồi mới xóa được):
       - docker-compose rm
+
+
