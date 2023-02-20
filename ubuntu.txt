@@ -1,0 +1,9 @@
+ubuntu:
+  react-native:
+    run react native app trong 1 project:
+      - react-native start
+    lỗi SDK:
+      - tạo 1 file local.properties trong ./android + thêm dòng này: sdk.dir=/home/USERNAME/Android/Sdk
+    lỗi caching (khi thêm thư mục mới, file mới... thì ta phải clean cache trong project):
+      - npm start --clean-cache
+
