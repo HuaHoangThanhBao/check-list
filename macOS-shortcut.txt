@@ -13,9 +13,13 @@
 - Install Homebrew:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-- Install NVM:
++ Install NVM:
 brew install nvm
 source $(brew --prefix nvm)/nvm.sh
 
-- NodeJS
-- NVM
++ NodeJS
++ NVM
+
++ Install Simulator cho android
+- mở app store -> tìm Xcode -> cài đặt
+- khi npm start project react native -> gõ dấu ? để hiện danh sách option -> chọn i để chạy simulator trên IOS
