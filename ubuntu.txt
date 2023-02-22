@@ -7,3 +7,37 @@ ubuntu:
     lỗi caching (khi thêm thư mục mới, file mới... thì ta phải clean cache trong project):
       - npm start --clean-cache
 
+
+  digital-ocean:
+    generta key:
+      - ssh-keygen
+      - /home/<your_home>/.ssh/digital_ocean_key => pass: B...*
+      - cat /home/<your_home>/.ssh/digital_ocean_key.pub => copy this secret value
+      - Go to DigitalOcean => Settings => Add new SSH key => pass secret above
+      - Then, create new droplet with Ubuntu server and SSH key authorization medthod => copy the created droplet ipv4 address
+      - open command on the computer:
+          + ssh -i ~/.ssh/digital_ocean_key root@<droplet_ip_v4>
+
+   connect to the DigitalOcean UBuntu server:
+     - ssh -i ~/.ssh/digital_ocean_key root@<droplet_ip_v4>
+     - install Docker for server:
+         + apt get update
+         + apt install docker.io
+       
+       
+  connect to mongoDB:
+    xem mongodb status:
+      - sudo systemctl status mongod
+    start mongodb host:
+      - sudo systemctl start mongod
+    stop mongodb host:
+      - sudo systemctl stop mongod
+      - hoặc: service mongod stop
+    access mongodb:
+      - mongosh
+    tạo database:
+      - use <database_name>
+    xem database đang dùng:
+      - db
+   
+

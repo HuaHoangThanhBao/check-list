@@ -35,6 +35,13 @@ docker:
       - docker container exec -it <id/name> <shell> => VD: docker container exec -it 463ece2c6786 /bin/bash
 
 
+  netowork:
+    hiển thị danh sách network:
+      - docker network ls
+    tạo 1 network:
+      - docker network create <network_name>
+
+
   compose:
     chạy và cài đặt docker-compose theo file docker-compose.yaml:
       - docker-compose up
