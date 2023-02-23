@@ -1,9 +1,13 @@
 docker:
   image:
+    hiển thị tất cả image:
+      - docker images
     build docker image:
       - docker image build -t <image-name> <context> => VD: docker image build -t demo .
     kiểm tra các layers của 1 docker image:
       - docker inspect image <image-name>
+    xóa docker image:
+      - docker rmi <image-name/image-id>
 
 
   container:
@@ -15,14 +19,18 @@ docker:
       - docker run <container-id/container-name>
     chạy container với custom port và name, kèm theo image (nếu có):
       - docker run -p<binding-port>:<root-port> --name <binding-name> <image-name(optional)>
+    build conatiner với Dockerfile:
+      - docker build -t <container-name>:<tag-name> .
     stop 1 container:
       - docker stop <container-id/container-name>
     xóa 1 container:
       - docker remove <container-id/container-name>
+      - hoặc docker rm <container-id/container-name>
     xem log của 1 container:
       - docker logs <container-id/container-name>
     xem evironmental hoặc những thứ bên trong 1 container:
-      - docker exec -it <container-id/container-name> /bin/bash
+      - docker exec -it <container-id/container-name> /bin/bash (Windows)
+      - hoặc: docker exec -it <container-id/container-name> //bin//sh (Linux)
       => ls => pwd => cd / => ls => env
 
 

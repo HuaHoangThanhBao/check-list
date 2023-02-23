@@ -33,6 +33,10 @@ ubuntu:
     stop mongodb host:
       - sudo systemctl stop mongod
       - hoặc: service mongod stop
+    hiển thị tất cả databases:
+      - show dbs
+    hiển thị tất cả collections trong database:
+      - show collections
     access mongodb:
       - mongosh
     tạo database:
