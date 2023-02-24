@@ -18,7 +18,7 @@ docker:
     chạy container ở port mặc định:
       - docker run <container-id/container-name>
     chạy container với custom port và name, kèm theo image (nếu có):
-      - docker run -p<binding-port>:<root-port> --name <binding-name> <image-name(optional)>
+      - docker run -p<binding-port>:<root-port> --name <binding-name> <image-name(optional)>:<images-tag>
     build conatiner với Dockerfile:
       - docker build -t <container-name>:<tag-name> .
     stop 1 container:
