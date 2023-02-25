@@ -4,10 +4,14 @@ docker:
       - docker images
     build docker image:
       - docker image build -t <image-name> <context> => VD: docker image build -t demo .
+    run docker image (lệnh này sẽ tạo và chạy container từ image):
+      - docker run <image-name>
     kiểm tra các layers của 1 docker image:
       - docker inspect image <image-name>
     xóa docker image:
       - docker rmi <image-name/image-id>
+    tag image (lệnh này giống như copy image sang 1 image mới với tên image được thay đổi):
+      - docker tag <image-name-want-to-be-tagged>:<image-tag> <new-image-name>:<new-image-tag>
 
 
   container:
