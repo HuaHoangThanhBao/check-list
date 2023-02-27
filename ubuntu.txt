@@ -43,5 +43,9 @@ ubuntu:
       - use <database_name>
     xem database đang dùng:
       - db
+      
+      
+  access file dưới quyền admin:
+    sudo su
    
 
